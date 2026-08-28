@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements. See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License. You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.apache.nifi</groupId>
+        <artifactId>nifi-streaming-json-record-services-bundle</artifactId>
+        <version>2.12.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>nifi-streaming-json-record-services-distribution</artifactId>
+    <packaging>pom</packaging>
+
+    <properties>
+        <streaming.json.skip.nar.metadata.verify>true</streaming.json.skip.nar.metadata.verify>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>enhanced</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <streaming.json.lane>enhanced</streaming.json.lane>
+                <streaming.json.nar.artifact>nifi-streaming-json-record-services-nar</streaming.json.nar.artifact>
+                <streaming.json.adapter.artifact>nifi-streaming-json-record-services-enhanced</streaming.json.adapter.artifact>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>org.apache.nifi</groupId>
+                    <artifactId>nifi-streaming-json-record-services-nar</artifactId>
+                    <version>${project.version}</version>
+                    <type>nar</type>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>stock</id>
+            <properties>
+                <streaming.json.lane>stock</streaming.json.lane>
+                <streaming.json.nar.artifact>nifi-streaming-json-record-services-stock-nar</streaming.json.nar.artifact>
+                <streaming.json.adapter.artifact>nifi-streaming-json-record-services-stock</streaming.json.adapter.artifact>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>org.apache.nifi</groupId>
+                    <artifactId>nifi-streaming-json-record-services-stock-nar</artifactId>
+                    <version>${project.version}</version>
+                    <type>nar</type>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+
+    <dependencies>
+        <!-- Keep the SBOM graph aligned with the JARs nested in the selected NAR, excluding parent-NAR components. -->
+        <dependency>
+            <groupId>org.apache.nifi</groupId>
+            <artifactId>${streaming.json.adapter.artifact}</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.nifi</groupId>
+                    <artifactId>nifi-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.nifi</groupId>
+                    <artifactId>nifi-utils</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.nifi</groupId>
+                    <artifactId>nifi-record-serialization-service-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.nifi</groupId>
+                    <artifactId>nifi-record</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.nifi</groupId>
+                    <artifactId>nifi-schema-registry-service-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-databind</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-compress</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>commons-io</groupId>
+                    <artifactId>commons-io</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-lang3</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.github.ben-manes.caffeine</groupId>
+                    <artifactId>caffeine</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.jspecify</groupId>
+                    <artifactId>jspecify</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.google.errorprone</groupId>
+                    <artifactId>error_prone_annotations</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.nifi</groupId>
+                    <artifactId>nifi-security-utils-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>commons-codec</groupId>
+                    <artifactId>commons-codec</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-text</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>release-compatibility</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/release-metadata</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>..</directory>
+                                    <filtering>true</filtering>
+                                    <includes>
+                                        <include>release-compatibility.properties</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.cyclonedx</groupId>
+                <artifactId>cyclonedx-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>release-sbom</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>makeAggregateBom</goal>
+                        </goals>
+                        <configuration>
+                            <outputFormat>json</outputFormat>
+                            <outputName>streaming-json-sbom</outputName>
+                            <includeBomSerialNumber>true</includeBomSerialNumber>
+                            <includeProvidedScope>false</includeProvidedScope>
+                            <includeSystemScope>false</includeSystemScope>
+                            <includeTestScope>false</includeTestScope>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>binary-release</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <appendAssemblyId>true</appendAssemblyId>
+                            <finalName>streaming-json-record-services-${project.version}-nifi-${nifi.version}-${streaming.json.lane}</finalName>
+                            <descriptors>
+                                <descriptor>src/assembly/binary.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>source-release</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <appendAssemblyId>true</appendAssemblyId>
+                            <finalName>streaming-json-record-services-${project.version}</finalName>
+                            <descriptors>
+                                <descriptor>src/assembly/source.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>verify-release-archive</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <delete dir="${project.build.directory}/release-verification"/>
+                                <unzip src="${project.build.directory}/streaming-json-record-services-${project.version}-nifi-${nifi.version}-${streaming.json.lane}-bin.zip"
+                                       dest="${project.build.directory}/release-verification"/>
+                                <resourcecount property="release.nar.count">
+                                    <fileset dir="${project.build.directory}/release-verification" includes="**/*.nar"/>
+                                </resourcecount>
+                                <resourcecount property="release.jar.count">
+                                    <fileset dir="${project.build.directory}/release-verification" includes="**/*.jar"/>
+                                </resourcecount>
+                                <fail message="Release archive must contain exactly one NAR">
+                                    <condition>
+                                        <not>
+                                            <equals arg1="${release.nar.count}" arg2="1"/>
+                                        </not>
+                                    </condition>
+                                </fail>
+                                <fail message="Release archive must not contain top-level JARs">
+                                    <condition>
+                                        <not>
+                                            <equals arg1="${release.jar.count}" arg2="0"/>
+                                        </not>
+                                    </condition>
+                                </fail>
+                                <loadfile property="release.sbom" srcFile="${project.build.directory}/streaming-json-sbom.json"/>
+                                <fail message="Release SBOM does not describe all bundled JARs">
+                                    <condition>
+                                        <not>
+                                            <and>
+                                                <contains string="${release.sbom}" substring="${streaming.json.adapter.artifact}"/>
+                                                <contains string="${release.sbom}" substring="nifi-streaming-json-record-services-core"/>
+                                                <contains string="${release.sbom}" substring="nifi-avro-record-utils"/>
+                                                <contains string="${release.sbom}" substring="avro"/>
+                                                <contains string="${release.sbom}" substring="nifi-standard-record-utils"/>
+                                                <contains string="${release.sbom}" substring="commons-csv"/>
+                                                <contains string="${release.sbom}" substring="nifi-schema-inference-utils"/>
+                                                <contains string="${release.sbom}" substring="xz"/>
+                                                <contains string="${release.sbom}" substring="snappy-java"/>
+                                                <contains string="${release.sbom}" substring="${streaming.json.nar.artifact}"/>
+                                            </and>
+                                        </not>
+                                    </condition>
+                                </fail>
+                                <fail message="Release SBOM includes components supplied by the parent NAR">
+                                    <condition>
+                                        <or>
+                                            <contains string="${release.sbom}" substring="nifi-api"/>
+                                            <contains string="${release.sbom}" substring="jackson-databind"/>
+                                            <contains string="${release.sbom}" substring="slf4j-api"/>
+                                        </or>
+                                    </condition>
+                                </fail>
+                            </target>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>release-checksums</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <checksum file="${project.build.directory}/streaming-json-record-services-${project.version}-nifi-${nifi.version}-${streaming.json.lane}-bin.zip"
+                                          algorithm="SHA-256" fileext=".sha256"/>
+                                <checksum file="${project.build.directory}/streaming-json-record-services-${project.version}-nifi-${nifi.version}-${streaming.json.lane}-bin.zip"
+                                          algorithm="SHA-512" fileext=".sha512"/>
+                                <checksum file="${project.build.directory}/streaming-json-record-services-${project.version}-source.zip"
+                                          algorithm="SHA-256" fileext=".sha256"/>
+                                <checksum file="${project.build.directory}/streaming-json-record-services-${project.version}-source.zip"
+                                          algorithm="SHA-512" fileext=".sha512"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

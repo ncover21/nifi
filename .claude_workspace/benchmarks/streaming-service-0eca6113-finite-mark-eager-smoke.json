@@ -1,0 +1,169 @@
+[
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.apache.nifi.json.benchmark.StreamingJsonServiceInputStreamBenchmark.convertRecordBatch",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Users/noahcover/Library/Java/JavaVirtualMachines/corretto-21.0.6/Contents/Home/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "21.0.6",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "21.0.6+7-LTS",
+        "warmupIterations" : 0,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "50 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "entryPoint" : "FINITE_MARK_STREAM",
+            "framing" : "ARRAY",
+            "materializationStrategy" : "EAGER",
+            "recordOperation" : "PASS_THROUGH",
+            "schemaAccess" : "INFER",
+            "targetRecordBytes" : "2048"
+        },
+        "primaryMetric" : {
+            "score" : 17.947120294117646,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 17.947120294117646,
+                "50.0" : 17.947120294117646,
+                "90.0" : 17.947120294117646,
+                "95.0" : 17.947120294117646,
+                "99.0" : 17.947120294117646,
+                "99.9" : 17.947120294117646,
+                "99.99" : 17.947120294117646,
+                "99.999" : 17.947120294117646,
+                "99.9999" : 17.947120294117646,
+                "100.0" : 17.947120294117646
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    17.947120294117646
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.apache.nifi.json.benchmark.StreamingJsonServiceInputStreamBenchmark.convertRecordBatch",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Users/noahcover/Library/Java/JavaVirtualMachines/corretto-21.0.6/Contents/Home/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "21.0.6",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "21.0.6+7-LTS",
+        "warmupIterations" : 0,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "50 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "entryPoint" : "FINITE_MARK_STREAM",
+            "framing" : "ARRAY",
+            "materializationStrategy" : "EAGER",
+            "recordOperation" : "PASS_THROUGH",
+            "schemaAccess" : "STATIC",
+            "targetRecordBytes" : "2048"
+        },
+        "primaryMetric" : {
+            "score" : 17.487041666666666,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 17.487041666666666,
+                "50.0" : 17.487041666666666,
+                "90.0" : 17.487041666666666,
+                "95.0" : 17.487041666666666,
+                "99.0" : 17.487041666666666,
+                "99.9" : 17.487041666666666,
+                "99.99" : 17.487041666666666,
+                "99.999" : 17.487041666666666,
+                "99.9999" : 17.487041666666666,
+                "100.0" : 17.487041666666666
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    17.487041666666666
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "org.apache.nifi.json.benchmark.StreamingJsonServiceInputStreamBenchmark.convertRecordBatch",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Users/noahcover/Library/Java/JavaVirtualMachines/corretto-21.0.6/Contents/Home/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "21.0.6",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "21.0.6+7-LTS",
+        "warmupIterations" : 0,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "50 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "entryPoint" : "FINITE_MARK_STREAM",
+            "framing" : "ARRAY",
+            "materializationStrategy" : "EAGER",
+            "recordOperation" : "PASS_THROUGH",
+            "schemaAccess" : "CACHE_HIT",
+            "targetRecordBytes" : "2048"
+        },
+        "primaryMetric" : {
+            "score" : 22.7945668,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 22.7945668,
+                "50.0" : 22.7945668,
+                "90.0" : 22.7945668,
+                "95.0" : 22.7945668,
+                "99.0" : 22.7945668,
+                "99.9" : 22.7945668,
+                "99.99" : 22.7945668,
+                "99.999" : 22.7945668,
+                "99.9999" : 22.7945668,
+                "100.0" : 22.7945668
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    22.7945668
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

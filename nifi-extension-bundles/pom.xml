@@ -91,6 +91,7 @@
         <module>nifi-apicurio-bundle</module>
         <module>nifi-jolt-bundle</module>
         <module>nifi-protobuf-bundle</module>
+        <module>nifi-streaming-json-record-services-bundle</module>
         <module>nifi-github-bundle</module>
         <module>nifi-gitlab-bundle</module>
         <module>nifi-atlassian-bundle</module>

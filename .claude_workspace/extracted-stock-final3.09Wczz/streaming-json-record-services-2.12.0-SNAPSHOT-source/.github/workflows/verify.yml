@@ -1,0 +1,53 @@
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Verify Streaming JSON Record Services
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  stock-nifi-2-10:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      - name: Build release archives
+        run: >-
+          ./mvnw -B -ntp -Pstock,release -Dnifi.version=2.10.0
+          -Dstreaming.json.source.revision=${{ github.sha }}
+          -Dbuild.iteration=ci-stock-2.10.0 clean verify
+      - name: Run processor compatibility matrix
+        run: >-
+          ./mvnw -B -ntp -Pprocessor-compatibility -Dnifi.version=2.10.0
+          -Dbuild.iteration=ci-stock-2.10.0-processors clean verify
+      - name: Verify extracted source archive
+        shell: bash
+        run: |
+          archive_path=$(find nifi-streaming-json-record-services-distribution/target -name '*-source.zip' -print -quit)
+          extract_dir=$(mktemp -d)
+          unzip -q "$archive_path" -d "$extract_dir"
+          source_dir=$(find "$extract_dir" -mindepth 1 -maxdepth 1 -type d -print -quit)
+          cd "$source_dir"
+          ./mvnw -B -ntp -Pstock -Dnifi.version=2.10.0 clean verify
+          ./mvnw -B -ntp -Pprocessor-compatibility -Dnifi.version=2.10.0 clean verify

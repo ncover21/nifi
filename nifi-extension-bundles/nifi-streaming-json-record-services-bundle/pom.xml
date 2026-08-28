@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements. See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License. You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.apache</groupId>
+        <artifactId>apache</artifactId>
+        <version>39</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>org.apache.nifi</groupId>
+    <artifactId>nifi-streaming-json-record-services-bundle</artifactId>
+    <version>2.12.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Apache NiFi Streaming JSON Record Services Bundle</name>
+    <description>Independent high-performance streaming JSON Record Reader and Record Writer Controller Services for Apache NiFi</description>
+    <url>https://nifi.apache.org/</url>
+
+    <scm>
+        <connection>scm:git:https://github.com/apache/nifi.git</connection>
+        <developerConnection>scm:git:https://github.com/apache/nifi.git</developerConnection>
+        <url>https://github.com/apache/nifi</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <nifi.version>2.12.0-SNAPSHOT</nifi.version>
+        <maven.compiler.release>21</maven.compiler.release>
+        <maven.compiler.plugin.version>3.15.0</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>3.5.6</maven.surefire.plugin.version>
+        <maven.enforcer.plugin.version>3.6.3</maven.enforcer.plugin.version>
+        <nifi.nar.maven.plugin.version>2.4.0</nifi.nar.maven.plugin.version>
+        <maven.assembly.plugin.version>3.8.0</maven.assembly.plugin.version>
+        <cyclonedx.maven.plugin.version>2.9.1</cyclonedx.maven.plugin.version>
+        <build.iteration>local</build.iteration>
+        <streaming.json.source.revision>UNSPECIFIED</streaming.json.source.revision>
+        <streaming.json.skip.nar.metadata.verify>false</streaming.json.skip.nar.metadata.verify>
+        <streaming.json.processor.adapter.artifact>nifi-streaming-json-record-services-stock</streaming.json.processor.adapter.artifact>
+    </properties>
+
+    <modules>
+        <module>nifi-streaming-json-record-services-core</module>
+    </modules>
+
+    <profiles>
+        <profile>
+            <id>enhanced</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>nifi-streaming-json-record-services-enhanced</module>
+                <module>nifi-streaming-json-record-services-nar</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>stock</id>
+            <modules>
+                <module>nifi-streaming-json-record-services-stock</module>
+                <module>nifi-streaming-json-record-services-stock-nar</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>all-lanes</id>
+            <modules>
+                <module>nifi-streaming-json-record-services-stock</module>
+                <module>nifi-streaming-json-record-services-enhanced</module>
+                <module>nifi-streaming-json-record-services-stock-nar</module>
+                <module>nifi-streaming-json-record-services-nar</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>release</id>
+            <modules>
+                <module>nifi-streaming-json-record-services-distribution</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>processor-compatibility</id>
+            <modules>
+                <module>nifi-streaming-json-record-services-stock</module>
+                <module>nifi-streaming-json-record-services-processor-tests</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>processor-compatibility-enhanced</id>
+            <properties>
+                <streaming.json.processor.adapter.artifact>nifi-streaming-json-record-services-enhanced</streaming.json.processor.adapter.artifact>
+            </properties>
+            <modules>
+                <module>nifi-streaming-json-record-services-enhanced</module>
+                <module>nifi-streaming-json-record-services-processor-tests</module>
+            </modules>
+        </profile>
+    </profiles>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-standard-shared-bom</artifactId>
+                <version>${nifi.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>streaming-json-dependency-contract</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <dependencyConvergence/>
+                                <bannedDependencies>
+                                    <searchTransitive>true</searchTransitive>
+                                    <excludes>
+                                        <exclude>org.apache.nifi:nifi-record-serialization-services</exclude>
+                                        <exclude>org.apache.nifi:nifi-record-serialization-services-nar</exclude>
+                                        <exclude>org.apache.nifi:nifi-json-record-utils</exclude>
+                                        <exclude>org.apache.nifi:nifi-kafka-*</exclude>
+                                        <exclude>org.apache.kafka:*</exclude>
+                                        <exclude>org.openjdk.jmh:*</exclude>
+                                    </excludes>
+                                </bannedDependencies>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.rat</groupId>
+                <artifactId>apache-rat-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>**/target/**</exclude>
+                    </excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>license-check</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration>
+                        <release>${maven.compiler.release}</release>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <configuration>
+                        <propertiesEncoding>UTF-8</propertiesEncoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>${maven.enforcer.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.nifi</groupId>
+                    <artifactId>nifi-nar-maven-plugin</artifactId>
+                    <version>${nifi.nar.maven.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>${maven.assembly.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.cyclonedx</groupId>
+                    <artifactId>cyclonedx-maven-plugin</artifactId>
+                    <version>${cyclonedx.maven.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>3.2.0</version>
+                    <executions>
+                        <execution>
+                            <id>verify-nar-release-metadata</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>run</goal>
+                            </goals>
+                            <configuration>
+                                <skip>${streaming.json.skip.nar.metadata.verify}</skip>
+                                <target>
+                                    <delete dir="${project.build.directory}/nar-release-metadata" quiet="true"/>
+                                    <unzip src="${project.build.directory}/${project.build.finalName}.nar"
+                                           dest="${project.build.directory}/nar-release-metadata">
+                                        <patternset>
+                                            <include name="META-INF/LICENSE"/>
+                                            <include name="META-INF/NOTICE"/>
+                                            <include name="META-INF/compatibility.properties"/>
+                                            <include name="META-INF/docs/additional-details/org.apache.nifi.serialization.json.streaming.StreamingJsonRecordReader/additionalDetails.md"/>
+                                            <include name="META-INF/docs/additional-details/org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter/additionalDetails.md"/>
+                                        </patternset>
+                                    </unzip>
+                                    <loadfile property="streaming.json.nar.license"
+                                              srcFile="${project.build.directory}/nar-release-metadata/META-INF/LICENSE"/>
+                                    <loadfile property="streaming.json.nar.notice"
+                                              srcFile="${project.build.directory}/nar-release-metadata/META-INF/NOTICE"/>
+                                    <loadfile property="streaming.json.nar.compatibility"
+                                              srcFile="${project.build.directory}/nar-release-metadata/META-INF/compatibility.properties"/>
+                                    <loadfile property="streaming.json.nar.reader.documentation"
+                                              srcFile="${project.build.directory}/nar-release-metadata/META-INF/docs/additional-details/org.apache.nifi.serialization.json.streaming.StreamingJsonRecordReader/additionalDetails.md"/>
+                                    <loadfile property="streaming.json.nar.writer.documentation"
+                                              srcFile="${project.build.directory}/nar-release-metadata/META-INF/docs/additional-details/org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter/additionalDetails.md"/>
+                                    <condition property="streaming.json.nar.metadata.valid">
+                                        <and>
+                                            <contains string="${streaming.json.nar.license}" substring="BSD Zero Clause License"/>
+                                            <contains string="${streaming.json.nar.license}" substring="Copyright 2011, Google Inc."/>
+                                            <contains string="${streaming.json.nar.notice}" substring="Apache Avro"/>
+                                            <contains string="${streaming.json.nar.notice}" substring="Apache Commons CSV"/>
+                                            <contains string="${streaming.json.nar.compatibility}"
+                                                      substring="target.nifi.version=${nifi.version}"/>
+                                            <contains string="${streaming.json.nar.compatibility}"
+                                                      substring="lane=${streaming.json.lane}"/>
+                                            <contains string="${streaming.json.nar.reader.documentation}"
+                                                      substring="# Streaming JSON Record Reader"/>
+                                            <contains string="${streaming.json.nar.writer.documentation}"
+                                                      substring="# Streaming JSON Record Set Writer"/>
+                                        </and>
+                                    </condition>
+                                    <fail unless="streaming.json.nar.metadata.valid"
+                                          message="Packaged NAR release metadata is incomplete or inconsistent"/>
+                                </target>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

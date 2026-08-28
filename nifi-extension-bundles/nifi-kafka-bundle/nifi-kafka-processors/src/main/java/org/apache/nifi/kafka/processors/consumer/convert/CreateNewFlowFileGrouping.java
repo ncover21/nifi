@@ -34,6 +34,7 @@ import org.apache.nifi.serialization.record.RecordSchema;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -80,12 +81,20 @@ public class CreateNewFlowFileGrouping implements RecordGroupingStrategy {
                     KafkaFlowFileAttribute.KAFKA_PARTITION, String.valueOf(partition)));
 
             final OutputStream out = session.write(ff);
-            final RecordSetWriter writer;
+            RecordSetWriter writer = null;
             try {
                 writer = writerFactory.createWriter(logger, writeSchema, out, attributes);
                 writer.beginRecordSet();
-            } catch (final IOException | SchemaNotFoundException ex) {
-                out.close();
+            } catch (final IOException | SchemaNotFoundException | RuntimeException | Error ex) {
+                closeAfterInitializationFailure(writer, out, ex);
+                try {
+                    session.remove(ff);
+                } catch (final RuntimeException | Error removalFailure) {
+                    if (removalFailure != ex) {
+                        removalFailure.addSuppressed(ex);
+                    }
+                    throw removalFailure;
+                }
                 throw ex;
             }
 
@@ -117,9 +126,30 @@ public class CreateNewFlowFileGrouping implements RecordGroupingStrategy {
         group.writer().write(recordToWrite);
     }
 
+    private static void closeAfterInitializationFailure(final RecordSetWriter writer, final OutputStream out, final Throwable failure) {
+        if (writer != null) {
+            try {
+                writer.close();
+            } catch (final Exception | Error closeFailure) {
+                if (failure != closeFailure) {
+                    failure.addSuppressed(closeFailure);
+                }
+            }
+        }
+        try {
+            out.close();
+        } catch (final Exception | Error closeFailure) {
+            if (failure != closeFailure) {
+                failure.addSuppressed(closeFailure);
+            }
+        }
+    }
+
     @Override
     public void finishAllGroups(final ProcessSession session) {
-        for (final Map.Entry<RecordGroupCriteria, RecordGroup> e : recordGroups.entrySet()) {
+        final Iterator<Map.Entry<RecordGroupCriteria, RecordGroup>> groupIterator = recordGroups.entrySet().iterator();
+        while (groupIterator.hasNext()) {
+            final Map.Entry<RecordGroupCriteria, RecordGroup> e = groupIterator.next();
             final RecordGroupCriteria criteria = e.getKey();
             final RecordGroup group = e.getValue();
 
@@ -145,8 +175,10 @@ public class CreateNewFlowFileGrouping implements RecordGroupingStrategy {
                 resultAttrs.put(KafkaFlowFileAttribute.KAFKA_CONSUMER_OFFSETS_COMMITTED, String.valueOf(commitOffsets));
                 recordCount = writeResult.getRecordCount();
             } catch (final Exception ex) {
+                groupIterator.remove();
                 throw new ProcessException("Failed to write Kafka records to FlowFile", ex);
             }
+            groupIterator.remove();
 
             FlowFile ff = group.flowFile();
             ff = session.putAllAttributes(ff, resultAttrs);
@@ -155,7 +187,32 @@ public class CreateNewFlowFileGrouping implements RecordGroupingStrategy {
             session.adjustCounter("Records Received from " + criteria.topic(), recordCount, false);
             session.transfer(ff, ConsumeKafka.SUCCESS);
         }
+    }
+
+    @Override
+    public void abortAllGroups() {
+        Throwable closeFailure = null;
+        for (final RecordGroup group : recordGroups.values()) {
+            try {
+                group.writer().close();
+            } catch (final Exception | Error e) {
+                if (closeFailure == null) {
+                    closeFailure = e;
+                } else if (closeFailure != e) {
+                    closeFailure.addSuppressed(e);
+                }
+            }
+        }
         recordGroups.clear();
+        if (closeFailure instanceof final Error error) {
+            throw error;
+        }
+        if (closeFailure instanceof final RuntimeException runtimeException) {
+            throw runtimeException;
+        }
+        if (closeFailure != null) {
+            throw new ProcessException("Failed to close Kafka record writer", closeFailure);
+        }
     }
 
     private record RecordGroupCriteria(RecordSchema schema, Map<String, String> groupingAttributes, String topic, int partition) {

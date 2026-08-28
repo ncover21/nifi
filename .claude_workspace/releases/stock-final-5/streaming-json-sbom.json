@@ -1,0 +1,887 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:37ab1bd1-d197-3f9a-867a-43aeaf822d9a",
+  "version" : 1,
+  "metadata" : {
+    "lifecycles" : [
+      {
+        "phase" : "build"
+      }
+    ],
+    "tools" : {
+      "components" : [
+        {
+          "type" : "library",
+          "author" : "OWASP Foundation",
+          "group" : "org.cyclonedx",
+          "name" : "cyclonedx-maven-plugin",
+          "version" : "2.9.1",
+          "description" : "CycloneDX Maven plugin",
+          "hashes" : [
+            {
+              "alg" : "MD5",
+              "content" : "9c7a565cf28cce58557d0c621c5ea4b1"
+            },
+            {
+              "alg" : "SHA-1",
+              "content" : "be882d5a22050bfa9d19090b1420c188617d0e1c"
+            },
+            {
+              "alg" : "SHA-256",
+              "content" : "698e0f37184a5b28c245c4065fd036dfce253b52f82fbb7113d81d36326cc249"
+            },
+            {
+              "alg" : "SHA-512",
+              "content" : "c0f0b11026858166f872a2eb54719492e5cecaa0bc9cd6b30b3ecb4a174eed220f4a1b5829d18d6734128e778d3cb3db7ffed177c92866133129cb29081814a0"
+            },
+            {
+              "alg" : "SHA-384",
+              "content" : "d80964707dfe5caca8c70521d5066f57589304c0a657e6fbc7c0614ea0fc7b3b3dbe7778361eee0f54ba111e9cb0ffcb"
+            },
+            {
+              "alg" : "SHA3-384",
+              "content" : "80bc3a275d9514bc457461ff52a72add8c7ecbbc01d8912efce57139016c544ee776981851be0a58fa977ab4221f703f"
+            },
+            {
+              "alg" : "SHA3-256",
+              "content" : "142317d6f245390f4fd2d0c100b16281b8dfc5c0c2cff86943bdcc97039cb699"
+            },
+            {
+              "alg" : "SHA3-512",
+              "content" : "af0fb9137c90b65d1a07f72e4d51ae509956cdb8800f35c961b037cdda1fe4a14ce3b496cef71ba85f1621affcfe29cd42704ae4191ff0b090a9602087c8997b"
+            }
+          ]
+        }
+      ]
+    },
+    "component" : {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-distribution@2.12.0-SNAPSHOT?type=pom",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.nifi",
+      "name" : "nifi-streaming-json-record-services-distribution",
+      "version" : "2.12.0-SNAPSHOT",
+      "description" : "Independent high-performance streaming JSON Record Reader and Record Writer Controller Services for Apache NiFi",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-distribution@2.12.0-SNAPSHOT?type=pom",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://nifi.apache.org/nifi-streaming-json-record-services-distribution/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/apache/nifi/nifi-streaming-json-record-services-distribution"
+        }
+      ]
+    },
+    "properties" : [
+      {
+        "name" : "maven.goal",
+        "value" : "makeBom"
+      },
+      {
+        "name" : "maven.scopes",
+        "value" : "compile,runtime"
+      },
+      {
+        "name" : "cdx:reproducible",
+        "value" : "enabled"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-stock@2.12.0-SNAPSHOT?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.nifi",
+      "name" : "nifi-streaming-json-record-services-stock",
+      "version" : "2.12.0-SNAPSHOT",
+      "description" : "Independent high-performance streaming JSON Record Reader and Record Writer Controller Services for Apache NiFi",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "6557fb03f92c608ba9307de293ff4f9e"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "a1e7c6e9f566fb25261fb45b1d47169518b71438"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "b11c794937b6e847a778f85a6d6a244ef3c6eb84b9985b8ebd86069fc8b00764"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "3da53adf167271d6698e8ffe83b5d41942afca87b87cfb59fb2e7957191ff3940138f78b6427dc5b5cd002a13ec35ad6e9c07ec0d730c8eb6e8dbd8033d43bdf"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "f5195050c397c735f2225b6e62d2df701b9da213e56161f665f445385d2549fef099cae70a75cee63454b5028d8c2693"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "db916cb91403b8c4d2053bb3e39322212d0769e172ba2012d824ce279d813135e3afee910b0d5953b77eb8ef76d1c679"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "58e697ee1a4995f3a822b8410e4d78589a21463fcc82f0ab2b5e6851f9b256cb"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "9e937765c27a30e2c114a51b5ce53657915d500177eb7cfb9112ddfba837ea07e023a7fa2891b4f3422bb3742aad89be014d66907899d26337fe085ddb8769fa"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-stock@2.12.0-SNAPSHOT?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://nifi.apache.org/nifi-streaming-json-record-services-stock/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/apache/nifi/nifi-streaming-json-record-services-stock"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-core@2.12.0-SNAPSHOT?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.nifi",
+      "name" : "nifi-streaming-json-record-services-core",
+      "version" : "2.12.0-SNAPSHOT",
+      "description" : "Independent high-performance streaming JSON Record Reader and Record Writer Controller Services for Apache NiFi",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "a06d3d1f9e4dc0e94aac1a58993e2fa3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "c18b6eb063d9afed97ab93b8f763326c9ff4a41d"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "3c7f67e8d4f26c697b3bed355c215cd7e083ee9e10068fb556a3e37a48669a7d"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "9032e627bcd79c8a344c0a5859bee4d0664c715c3d6e7623be7ed3c59738eac6354b201e0b32c397cba6f4f40fb7aa643f247647d95dcfc11896d1444127d5f5"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "865b3ef6148f22f56ec315ea1f806ed8ff31d79f171921040d7fd6ca3ddcb263b13035b9ec63ffadcaf4d39faae4dea6"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "9f36d3900e584574cb6d9731fcb73c395c684af39e77ca477a6b3a581a149faa1e788dfeb8228faba8a5b3007cd4f454"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "fa081e91fd5f6e38c8461f0767790df7be3d9566933176f772811ce2510ad9e7"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "91e22b1558b00083f0782a84291cc703298f6ff10d4347c1f598283b4f9ea6f1b7c47f250990fc2822fa7242701cd07bd15513c22f7466c8ab4eebb43d3dd51d"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-core@2.12.0-SNAPSHOT?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://nifi.apache.org/nifi-streaming-json-record-services-core/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/apache/nifi/nifi-streaming-json-record-services-core"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.nifi/nifi-avro-record-utils@2.10.0?type=jar",
+      "publisher" : "Apache NiFi Project",
+      "group" : "org.apache.nifi",
+      "name" : "nifi-avro-record-utils",
+      "version" : "2.10.0",
+      "description" : "This module contains reusable utilities related to extensions that can be shared across NARs.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "7a9edd0cf12f4208853c1bc37815153d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "7d4d8cd7391002a11dcc81426a9e6b239a8eafb4"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "f1ff660155409e440b43561fbaf82f345047047353c42178edadefad2be2eb19"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "c2ac39bcf882a7a43e5122d3129949aea5a896579065b841de42969ad5f73b17d077da4f9bc127ed828ebfd3ec706330bcb3de331c4209acdde6e3c98e295ef3"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "5f6e5056724d388953982745d1d9ac011a9e4ef095e5e964dd4d7ae133e47562d3d152297a11837a124fea2f12ae4e7c"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "2326e44edcb9126150d253c149aca7053292290e19582a6388b4cccffd101a81b00462322f49caa5c5b2c9a94e79f149"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "fd09d4c1c54a5bcea4ceb35a83d8c8753d70494ccf49b99c3cf983f2c363eae8"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "eb030aa62b33f1a9b28e62a6e86ad7a54038e0f7cbe2ff34c846149405734f8c861dad9051b4cf220bce06bc3795e4f4e73534b155bfb0cd0e339cc4e8e68372"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.nifi/nifi-avro-record-utils@2.10.0?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://nifi.apache.org/nifi-bom/nifi-extension-bom/nifi-extension-bundles/nifi-extension-utils/nifi-record-utils/nifi-avro-record-utils"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/NIFI"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/nifi-dev"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://git-wip-us.apache.org/repos/asf?p=nifi.git/nifi-bom/nifi-extension-bom/nifi-extension-bundles/nifi-extension-utils/nifi-record-utils/nifi-avro-record-utils"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.avro/avro@1.12.1?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.avro",
+      "name" : "avro",
+      "version" : "1.12.1",
+      "description" : "Avro core components",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "83a5127156dbc59c024d8e76302161e7"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "1c6294ac1d67ce396f51827c87ba2e01de304500"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "72600f057bfbe2efe35fa55433e7756d45667dc938934be38a6e2be368aca237"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "1d3ea16d6f374724728660f02fbbb20a42a6f380404cce092d3ab6c143e4e3b8ae9353040ba409af21b06e4a1a1456098020509bed6c12aa9ab6974d52ea8c5f"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "fbe691d8500a239ba2a4370235f66fd4e53895489181258ecee2a45fa5dc5cfaf191b5973d702f96e17284f96562675c"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "2a945cd2245ee74ecba3760b2767abe6b105b4557cc3ab97298dcae75044cd2fa077705b48371ee9ba580c9112ff942c"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "1d2f7bbd2ed2e57097bbe760f4c392ea46de7870547170c43b12ddcfa731140b"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "c163eca320d4e66751b2e08bc06f1a659059c009e3f98074da2404d4e58994fbaf4ccadb14f3631bf6fdd270c711e4f320a7f83f519f6269afe89b1eb425adc4"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.avro/avro@1.12.1?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://avro.apache.org"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/AVRO"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/avro-dev/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "scm:git:https://github.com/apache/avro/avro-parent/avro"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.nifi/nifi-standard-record-utils@2.10.0?type=jar",
+      "publisher" : "Apache NiFi Project",
+      "group" : "org.apache.nifi",
+      "name" : "nifi-standard-record-utils",
+      "version" : "2.10.0",
+      "description" : "This module contains reusable utilities related to extensions that can be shared across NARs.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "882537913a698c6c8d4304a94490075e"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ef20edf6e909a60bf5797e1313d5cafb1279b37a"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "72bf048bf2017731e2f779a6354879fe9702d349b3bcea78095fdcdc3e539882"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "ced816ce79298eaba4659dfb3bc011d624c87f288579b24f4f5b0acdd6a0e933dd0428ebf8047898dd9477a9704820638674cce0c5a013774410ffd5a4875094"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "c70fea54aae342a909de3ce87ad1120d2d12512f5388e48892d8236b1a3dca47c7c9c32ce955cf68560d45dcc904344c"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "fb41527e4ed8546276bdcda3ec997fdf75f51b4856bfa422f3d78f89eecdad0ad5746409dd41a0e5943165e690638f0c"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "89e85ab7237a3d1198fbff800bcdf366bd3a071658e05c8cf64f48c50c868cdd"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "a88a8f6cd0682d1009144287e03c7a13d473970a02dab8fde286f0b1ac9371dd2bbde0e8e74aec90eb6e6da1cb81e64f3892bd9298af9d3f3c2befe16c78af61"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.nifi/nifi-standard-record-utils@2.10.0?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://nifi.apache.org/nifi-bom/nifi-extension-bom/nifi-extension-bundles/nifi-extension-utils/nifi-record-utils/nifi-standard-record-utils"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/NIFI"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/nifi-dev"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://git-wip-us.apache.org/repos/asf?p=nifi.git/nifi-bom/nifi-extension-bom/nifi-extension-bundles/nifi-extension-utils/nifi-record-utils/nifi-standard-record-utils"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.commons/commons-csv@1.14.1?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.commons",
+      "name" : "commons-csv",
+      "version" : "1.14.1",
+      "description" : "The Apache Commons CSV library provides a simple interface for reading and writing CSV files of various types.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "b8119900179992cf139005db63481103"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "467354980fade8528b6a9f9bdf7f4f19ab9b3373"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "32be0e1e76673092f5d12cb790bd2acb6c2ab04c4ea6efc69ea5ee17911c24fe"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "f64fb9c4895532dd9f6cd448dfb4b35bfe9c4a81afc61e5bb13121f5142330ae97447200022b03988967a7cb89d3f48ce76e253238eb9f0bea57c09b352ac27b"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "a20dfbaaedf8e08e13969761e456ed6caa2e4c513c4c1662654fd4348a40a57416675e8e2802b1f1d0ce2bf3353bed75"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "577f3ee1b77ff740d2c894f8dfff6e662f1329030d04a7b27cfcef910b711decc7b26654bb259067a11ce3ba923edb16"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "e645fdbb0c85c775adf273502ea361b6b432a9fcf0e32d9946226c4a28b0b959"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "f9e5e2e9ba824e86ea5b2c9cdab1edde6a253b5ca557ea6e6e6669e318c35ad17ee1162cb0cc90febf5b60ad3535e5a93bfa2e3b83191bf4cb462662b24cce74"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.commons/commons-csv@1.14.1?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://commons.apache.org/proper/commons-csv/"
+        },
+        {
+          "type" : "build-system",
+          "url" : "https://github.com/apache/commons-csv/actions"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/CSV"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/commons-user/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://gitbox.apache.org/repos/asf?p=commons-csv.git"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.nifi/nifi-schema-inference-utils@2.10.0?type=jar",
+      "publisher" : "Apache NiFi Project",
+      "group" : "org.apache.nifi",
+      "name" : "nifi-schema-inference-utils",
+      "version" : "2.10.0",
+      "description" : "This module contains reusable utilities related to extensions that can be shared across NARs.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "3124ded386d3ad2d214721baa30d5b4b"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "28c3e3266cd34a7ad09631b700d946805329a211"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "b253f323373878439509118a102c53a8ab7853f7b8b6e52a4962768cec40e9f1"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "70bd49b89f0598a8942a3ed84d402091bee99af4a4741b58aed90add35c61e59a8d9712b7c0466e83f72d777671fe7dc47327e96701e9b87e5cc1df268686103"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "1480da1504fbe364461ece44f54ac219838ddb8ae623b22d80f093cd6167dab2c4ce7f75d604c2036b0fcd3d4cb438e0"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "4b0311a393aec3880c7d83df4107e2f6398bd3ecf37a4f0af0ab4b91c00513525588b0e4967ec27f110a4338cf8dd6a1"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "f1cdd67b12dc6d66d2f3e9b2827f917a6e9d658013dea0397600c2fff80d18e1"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "18c2be994edcc20096a383ab1a5827e821f30cfbcbcd2b4c9293d74a6011507038d07ce55c69f28048eb3955e3c76a98b92de3f8821c951963711923d266163f"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.nifi/nifi-schema-inference-utils@2.10.0?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://nifi.apache.org/nifi-bom/nifi-extension-bom/nifi-extension-bundles/nifi-extension-utils/nifi-record-utils/nifi-schema-inference-utils"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/NIFI"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/nifi-dev"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://git-wip-us.apache.org/repos/asf?p=nifi.git/nifi-bom/nifi-extension-bom/nifi-extension-bundles/nifi-extension-utils/nifi-record-utils/nifi-schema-inference-utils"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.tukaani/xz@1.12?type=jar",
+      "group" : "org.tukaani",
+      "name" : "xz",
+      "version" : "1.12",
+      "description" : "XZ data compression",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "9c8773d7dc00a4d842cf78752ca6adfa"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "bb9703ba3753ab8665f65e6a25b3ddc7b09b1caf"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "3e158a87bd73d8afb4b6e8239c013b7d049c48563f45860ce99cd2e448cf4a6b"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "a854dc65df5a07fbb026f624d2b10901f6f5d95a20091c52bfb64f88c14565ef1bb65733436ffd5b2a9d16329e523b650085fd4c36a1bb384d40788e727c1e60"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "4c8366773c7bab2db88029ab4589687fbb62d41c3ec9d263e150e3edd85f0e163fe8729d8937ba299b85c2d621a59688"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "435b3751a390000897d8fc3998d63664ae090704e5bb9f832d85bcf361f10ee1a44eeecda0941c60ffb685169a1979de"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "b655696201f997e38c838150d6885114c1eaa19ee07640098144f659b3826d8a"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "529779b7118db46162b926524f2d4248b44240557bd325ac77d28d5cc7351f6f3f9edf16c6139a68a5e37ea296b872816fd0e1f84d4d148ed0971541eb835866"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "0BSD",
+            "url" : "http://landley.net/toybox/license.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.tukaani/xz@1.12?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://tukaani.org/xz/java.html"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/tukaani-project/xz-java"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.xerial.snappy/snappy-java@1.1.10.8?type=jar",
+      "publisher" : "xerial.org",
+      "group" : "org.xerial.snappy",
+      "name" : "snappy-java",
+      "version" : "1.1.10.8",
+      "description" : "snappy-java: A fast compression/decompression library",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "a25bd213d1ca2f3c605c5f03050db070"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ccbaa2b5ea6a023a27c44daf2d6cdec0e138592d"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "50485d06037fea3d6e40c968386feeca6338cc9872e25549593ff3eb352cefcc"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "c7133f726f366b9f06df98d94b4dd7c91c7702c543e1a318055a886af5e625d8231b0a6728250596181bc20a6c4147855eeb02ed55c447fe13ff2156e29985a9"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "aeb78b3f4c56ce769f5fda9cfabe00be77d21b93637f70601c28b16eef41405e1291001c3a6e45001b356543e33b664b"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "6137f6354b574d8decb579ad9147dd9463e3a9f62d1e929266bee1adc020f57382973d0a1abf9daeb2007bb32671fed8"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "f44a4a8cffe82ce6c99b401e9d822e71cdfc63c1b279b278282eda07243b2a94"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "655731ef3b20a2cec213138c170f7dc7182c2a09536d74c1d8a13224bb204dd706a35749bf99b51c4b945b75784a0a26c60931a158d27e1378ccd1c8ac7a0783"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.xerial.snappy/snappy-java@1.1.10.8?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/xerial/snappy-java"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/xerial/snappy-java"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-stock-nar@2.12.0-SNAPSHOT?type=nar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.nifi",
+      "name" : "nifi-streaming-json-record-services-stock-nar",
+      "version" : "2.12.0-SNAPSHOT",
+      "description" : "Independent high-performance streaming JSON Record Reader and Record Writer Controller Services for Apache NiFi",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "f6e304614f27830931108fe89d193721"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "49d6229025899db5a744ddcdae39033274deb52c"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "17242918ca0cb7acda010f218444d91af27a0213daf579f7f56e57974e6f3b66"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "55c49497e4a95d3bdf57f4c0a8a0eff6d33ae16167760dd46533562f2e151b465090a3294bb6c40dc2513e3121033759961f0730dba0e6b2b9ddf7140a32dfbc"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "ba8ad8090443983194b593233dadf1ea95f99d3f1c2b7eb88c5355d680b339d4a521fcff350700f9120df7319d3089a9"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "109d14a070388e9e065eb70c1a5f006144e86ffa110b20819e5a23d9477f7d0f217e958afb93ebb5edd249b7743e7d29"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "fedcfe0b08de57f568f23616dbc1d6d27f17c20021e580d9e211befd34fafbd2"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "1762b1dbe39e522c6f268b375a4e3ce3a36cadf47d6f8c6590bd5348a932106b663c03fa6f50ac1604d32e7c905aa5d35acb615907bcf7cf36319a2fbe98d9ce"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-stock-nar@2.12.0-SNAPSHOT?type=nar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://nifi.apache.org/nifi-streaming-json-record-services-stock-nar/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/www-announce/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/apache/nifi/nifi-streaming-json-record-services-stock-nar"
+        }
+      ]
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-distribution@2.12.0-SNAPSHOT?type=pom",
+      "dependsOn" : [
+        "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-stock@2.12.0-SNAPSHOT?type=jar",
+        "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-stock-nar@2.12.0-SNAPSHOT?type=nar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-stock@2.12.0-SNAPSHOT?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-core@2.12.0-SNAPSHOT?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-core@2.12.0-SNAPSHOT?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.nifi/nifi-avro-record-utils@2.10.0?type=jar",
+        "pkg:maven/org.apache.nifi/nifi-standard-record-utils@2.10.0?type=jar",
+        "pkg:maven/org.apache.nifi/nifi-schema-inference-utils@2.10.0?type=jar",
+        "pkg:maven/org.tukaani/xz@1.12?type=jar",
+        "pkg:maven/org.xerial.snappy/snappy-java@1.1.10.8?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.nifi/nifi-avro-record-utils@2.10.0?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.nifi/nifi-standard-record-utils@2.10.0?type=jar",
+        "pkg:maven/org.apache.avro/avro@1.12.1?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.nifi/nifi-standard-record-utils@2.10.0?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.commons/commons-csv@1.14.1?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.commons/commons-csv@1.14.1?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.avro/avro@1.12.1?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.nifi/nifi-schema-inference-utils@2.10.0?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.tukaani/xz@1.12?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.xerial.snappy/snappy-java@1.1.10.8?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.nifi/nifi-streaming-json-record-services-stock-nar@2.12.0-SNAPSHOT?type=nar",
+      "dependsOn" : [ ]
+    }
+  ]
+}

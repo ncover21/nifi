@@ -77,6 +77,23 @@ public interface RecordReader extends Closeable {
     RecordSchema getSchema() throws MalformedRecordException;
 
     /**
+     * Describes the lifetime and validation guarantees of records returned by this reader.
+     *
+     * @return the record handling mode
+     */
+    default RecordHandlingMode getRecordHandlingMode() {
+        return RecordHandlingMode.RETAINABLE;
+    }
+
+    enum RecordHandlingMode {
+        /** Records must be consumed before the reader advances or closes. */
+        STREAMING,
+
+        /** Records remain valid after the reader advances or closes, but later input can still fail validation. */
+        RETAINABLE
+    }
+
+    /**
      * @return a RecordSet that returns the records in this Record Reader in a streaming fashion
      */
     default RecordSet createRecordSet() {

@@ -1,0 +1,817 @@
+nifi-streaming-json-record-services-core-2.12.0-SNAPSHOT.jar -> java.base
+nifi-streaming-json-record-services-core-2.12.0-SNAPSHOT.jar -> java.sql
+nifi-streaming-json-record-services-core-2.12.0-SNAPSHOT.jar -> not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> com.fasterxml.jackson.core.JsonParseException      not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> com.fasterxml.jackson.core.JsonParser              not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> com.fasterxml.jackson.core.JsonParser$Feature      not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> com.fasterxml.jackson.core.JsonToken               not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> com.fasterxml.jackson.core.TreeNode                not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> com.fasterxml.jackson.databind.JsonNode            not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> com.fasterxml.jackson.databind.node.ArrayNode      not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.Boolean                                  java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.Exception                                java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.Integer                                  java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.Number                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.invoke.CallSite                          java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.invoke.LambdaMetafactory                 java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.invoke.MethodType                        java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.lang.invoke.StringConcatFactory               java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.util.Collections                              java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.util.Iterator                                 java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.util.LinkedHashMap                            java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.util.Map$Entry                                java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.util.Objects                                  java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.util.Optional                                 java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.util.Set                                      java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.util.function.BiPredicate                     java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> java.util.function.Supplier                        java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.components.DescribedValue          not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.components.PropertyDescriptor      not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.components.PropertyDescriptor$Builder not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.components.Validator               not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.logging.ComponentLog               not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.processor.util.StandardValidators  not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.MalformedRecordException not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.RecordReader         not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.SimpleRecordSchema   not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.record.DataType      not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.record.MapRecord     not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.record.Record        not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.record.SerializedForm not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.record.type.ArrayDataType not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.record.type.ChoiceDataType not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.record.type.MapDataType not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.record.type.RecordDataType not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader -> org.apache.nifi.serialization.record.util.DataTypeUtils not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader$1 -> com.fasterxml.jackson.core.JsonToken               not found
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader$1 -> java.lang.NoSuchFieldError                         java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader$1 -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractJsonRowRecordReader$1 -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.lang.invoke.CallSite                          java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.lang.invoke.LambdaMetafactory                 java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.lang.invoke.MethodType                        java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.util.ArrayList                                java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.util.Collection                               java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.util.Iterator                                 java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.util.LinkedHashSet                            java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.util.Set                                      java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> java.util.function.BiConsumer                      java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> org.apache.nifi.schema.inference.SchemaInferenceEngine not found
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> org.apache.nifi.serialization.SimpleRecordSchema   not found
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> org.apache.nifi.serialization.record.DataType      not found
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> org.apache.nifi.serialization.record.RecordField   not found
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> org.apache.nifi.serialization.record.SchemaIdentifier not found
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> org.apache.nifi.serialization.record.type.ArrayDataType not found
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> org.apache.nifi.serialization.record.type.ChoiceDataType not found
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference -> org.apache.nifi.serialization.record.type.RecordDataType not found
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference$1 -> java.lang.NoSuchFieldError                         java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference$1 -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractSchemaInference$1 -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> com.fasterxml.jackson.core.JsonParser              not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> com.fasterxml.jackson.core.StreamReadConstraints   not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> com.fasterxml.jackson.core.StreamReadConstraints$Builder not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.io.ByteArrayInputStream                       java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.Boolean                                  java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.Double                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.Enum                                     java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.Error                                    java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.Integer                                  java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.Long                                     java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.Math                                     java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.RuntimeException                         java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.invoke.CallSite                          java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.invoke.LambdaMetafactory                 java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.lang.invoke.MethodType                        java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.util.ArrayList                                java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.util.Collection                               java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.util.Optional                                 java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.util.function.BiPredicate                     java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> java.util.function.Supplier                        java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.annotation.documentation.CapabilityDescription not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.annotation.documentation.Tags      not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.annotation.lifecycle.OnEnabled     not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.components.AllowableValue          not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.components.PropertyDescriptor      not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.components.PropertyDescriptor$Builder not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.components.PropertyValue           not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.components.Validator               not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.context.PropertyContext            not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.controller.ConfigurationContext    not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.controller.ControllerService       not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.logging.ComponentLog               not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.migration.PropertyConfiguration    not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.processor.DataUnit                 not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.processor.util.StandardValidators  not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.schema.access.SchemaAccessStrategy not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.schema.access.SchemaAccessUtils    not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.schema.access.SchemaNotFoundException not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.schema.inference.RecordSource      not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.schema.inference.RecordSourceFactory not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.schema.inference.SchemaInferenceEngine not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.schema.inference.TimeValueInference not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.schemaregistry.services.SchemaRegistry not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.serialization.DateTimeUtils        not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.serialization.MalformedRecordException not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.serialization.RecordReader         not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.serialization.RecordReaderFactory  not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.serialization.RecordSchemaCacheService not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.serialization.SchemaRegistryService not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$1 -> com.fasterxml.jackson.core.JsonParser              not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$1 -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$1 -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$1 -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$1 -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$1 -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$1 -> org.apache.nifi.schema.inference.RecordSource      not found
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$InputStreamInference -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$InputStreamInference -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$InputStreamInference -> java.lang.Record                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$InputStreamInference -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$InputStreamInference -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$InputStreamInference -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$InputStreamInference -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$InputStreamInference -> java.lang.invoke.TypeDescriptor                    java.base
+   org.apache.nifi.serialization.json.streaming.AbstractStreamingJsonRecordReaderService$InputStreamInference -> java.lang.runtime.ObjectMethods                    java.base
+   org.apache.nifi.serialization.json.streaming.ByteRecordSourceFactory -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.ByteRecordSourceFactory -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.ByteRecordSourceFactory -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.ByteRecordSourceFactory -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.ByteRecordSourceFactory -> org.apache.nifi.schema.inference.RecordSource      not found
+   org.apache.nifi.serialization.json.streaming.ByteRecordSourceFactory -> org.apache.nifi.schema.inference.RecordSourceFactory not found
+   org.apache.nifi.serialization.json.streaming.ByteSchemaAccessStrategy -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.ByteSchemaAccessStrategy -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.ByteSchemaAccessStrategy -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.ByteSchemaAccessStrategy -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.ByteSchemaAccessStrategy -> org.apache.nifi.schema.access.SchemaNotFoundException not found
+   org.apache.nifi.serialization.json.streaming.ByteSchemaAccessStrategy -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> java.io.ByteArrayInputStream                       java.base
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> java.util.EnumSet                                  java.base
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> java.util.Optional                                 java.base
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> java.util.Set                                      java.base
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> org.apache.nifi.logging.ComponentLog               not found
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> org.apache.nifi.schema.access.SchemaAccessStrategy not found
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> org.apache.nifi.schema.access.SchemaField          not found
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> org.apache.nifi.schema.access.SchemaNotFoundException not found
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> org.apache.nifi.serialization.RecordSchemaCacheService not found
+   org.apache.nifi.serialization.json.streaming.CachedSchemaAccessStrategy -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.lang.Boolean                                  java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.lang.Double                                   java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.lang.Exception                                java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.lang.Float                                    java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.lang.IllegalStateException                    java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.lang.Integer                                  java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.lang.Long                                     java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.time.LocalDate                                java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.time.LocalDateTime                            java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.time.OffsetDateTime                           java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.util.Optional                                 java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> java.util.Set                                      java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> org.apache.nifi.serialization.record.Record        not found
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> org.apache.nifi.serialization.record.RecordField   not found
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord -> org.apache.nifi.serialization.record.SerializedForm not found
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord$RecordMaterializer -> java.lang.Exception                                java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord$RecordMaterializer -> java.lang.FunctionalInterface                      java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord$RecordMaterializer -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord$RecordMaterializer -> org.apache.nifi.serialization.record.Record        not found
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord$RecordSupplier -> java.lang.Exception                                java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord$RecordSupplier -> java.lang.FunctionalInterface                      java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord$RecordSupplier -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.DeferredJsonRecord$RecordSupplier -> org.apache.nifi.serialization.record.Record        not found
+   org.apache.nifi.serialization.json.streaming.FieldTypeInference -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.FieldTypeInference -> java.util.HashSet                                  java.base
+   org.apache.nifi.serialization.json.streaming.FieldTypeInference -> java.util.Iterator                                 java.base
+   org.apache.nifi.serialization.json.streaming.FieldTypeInference -> java.util.Set                                      java.base
+   org.apache.nifi.serialization.json.streaming.FieldTypeInference -> org.apache.nifi.serialization.record.DataType      not found
+   org.apache.nifi.serialization.json.streaming.FieldTypeInference -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.FieldTypeInference -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.FieldTypeInference -> org.apache.nifi.serialization.record.type.RecordDataType not found
+   org.apache.nifi.serialization.json.streaming.FieldTypeInference -> org.apache.nifi.serialization.record.util.DataTypeUtils not found
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.io.ByteArrayInputStream                       java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.lang.invoke.CallSite                          java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.lang.invoke.LambdaMetafactory                 java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.lang.invoke.MethodType                        java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.util.EnumSet                                  java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> java.util.Set                                      java.base
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> org.apache.nifi.logging.ComponentLog               not found
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> org.apache.nifi.schema.access.SchemaAccessStrategy not found
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> org.apache.nifi.schema.access.SchemaField          not found
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> org.apache.nifi.schema.inference.RecordSource      not found
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> org.apache.nifi.schema.inference.RecordSourceFactory not found
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> org.apache.nifi.schema.inference.SchemaInferenceEngine not found
+   org.apache.nifi.serialization.json.streaming.InferSchemaAccessStrategy -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.JsonEncodingProbeInputStream -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.JsonEncodingProbeInputStream -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.JsonEncodingProbeInputStream -> java.lang.Math                                     java.base
+   org.apache.nifi.serialization.json.streaming.JsonEncodingProbeInputStream -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.JsonEncodingProbeInputStream -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.JsonEncodingProbeInputStream -> java.lang.System                                   java.base
+   org.apache.nifi.serialization.json.streaming.JsonEncodingProbeInputStream -> java.util.Objects                                  java.base
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> com.fasterxml.jackson.core.JsonParser              not found
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> com.fasterxml.jackson.core.JsonToken               not found
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> com.fasterxml.jackson.core.SerializableString      not found
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> com.fasterxml.jackson.core.StreamReadConstraints   not found
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> com.fasterxml.jackson.core.io.SerializedString     not found
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> java.lang.AutoCloseable                            java.base
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> java.lang.Error                                    java.base
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> java.lang.RuntimeException                         java.base
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> org.apache.nifi.schema.inference.RecordSource      not found
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> org.slf4j.Logger                                   not found
+   org.apache.nifi.serialization.json.streaming.JsonParserRecordSource -> org.slf4j.LoggerFactory                            not found
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> java.lang.IllegalArgumentException                 java.base
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> java.util.ArrayDeque                               java.base
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> java.util.Collections                              java.base
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> java.util.IdentityHashMap                          java.base
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> java.util.Iterator                                 java.base
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> java.util.Optional                                 java.base
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> java.util.Queue                                    java.base
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> java.util.Set                                      java.base
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> org.apache.nifi.serialization.record.DataType      not found
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> org.apache.nifi.serialization.record.RecordField   not found
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> org.apache.nifi.serialization.record.type.ArrayDataType not found
+   org.apache.nifi.serialization.json.streaming.JsonSchemaSelection -> org.apache.nifi.serialization.record.type.RecordDataType not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> com.fasterxml.jackson.databind.JsonNode            not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> com.fasterxml.jackson.databind.node.ArrayNode      not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.lang.invoke.CallSite                          java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.lang.invoke.LambdaMetafactory                 java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.lang.invoke.MethodType                        java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.lang.invoke.StringConcatFactory               java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.util.ArrayList                                java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.util.Iterator                                 java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.util.LinkedHashMap                            java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.util.Map$Entry                                java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.util.Objects                                  java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.util.Optional                                 java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.util.Set                                      java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.util.function.BiPredicate                     java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> java.util.function.Supplier                        java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.logging.ComponentLog               not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.MalformedRecordException not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.SimpleRecordSchema   not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.record.DataType      not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.record.MapRecord     not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.record.Record        not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.record.RecordField   not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.record.SerializedForm not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.record.type.ArrayDataType not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.record.type.MapDataType not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.record.type.RecordDataType not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader -> org.apache.nifi.serialization.record.util.DataTypeUtils not found
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader$1 -> java.lang.NoSuchFieldError                         java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader$1 -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.JsonTreeRowRecordReader$1 -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.OutputGrouping -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.OutputGrouping -> java.lang.Enum                                     java.base
+   org.apache.nifi.serialization.json.streaming.OutputGrouping -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.OutputGrouping -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.ParsingStrategy -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.ParsingStrategy -> java.lang.Enum                                     java.base
+   org.apache.nifi.serialization.json.streaming.ParsingStrategy -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.ParsingStrategy -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.ParsingStrategy -> org.apache.nifi.components.DescribedValue          not found
+   org.apache.nifi.serialization.json.streaming.RecordCapturingInputStream -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.RecordCapturingInputStream -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.RecordCapturingInputStream -> java.lang.IllegalArgumentException                 java.base
+   org.apache.nifi.serialization.json.streaming.RecordCapturingInputStream -> java.lang.IllegalStateException                    java.base
+   org.apache.nifi.serialization.json.streaming.RecordCapturingInputStream -> java.lang.Integer                                  java.base
+   org.apache.nifi.serialization.json.streaming.RecordCapturingInputStream -> java.lang.Math                                     java.base
+   org.apache.nifi.serialization.json.streaming.RecordCapturingInputStream -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.RecordCapturingInputStream -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.RecordCapturingInputStream -> java.lang.System                                   java.base
+   org.apache.nifi.serialization.json.streaming.RecordCapturingInputStream -> java.util.Arrays                                   java.base
+   org.apache.nifi.serialization.json.streaming.RecordCapturingInputStream -> java.util.Objects                                  java.base
+   org.apache.nifi.serialization.json.streaming.RecordMaterializationStrategy -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.RecordMaterializationStrategy -> java.lang.Enum                                     java.base
+   org.apache.nifi.serialization.json.streaming.RecordMaterializationStrategy -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.RecordMaterializationStrategy -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.RecordMaterializationStrategy -> org.apache.nifi.components.DescribedValue          not found
+   org.apache.nifi.serialization.json.streaming.ReplayOwningRecordReader -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.ReplayOwningRecordReader -> java.lang.Error                                    java.base
+   org.apache.nifi.serialization.json.streaming.ReplayOwningRecordReader -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.ReplayOwningRecordReader -> java.lang.RuntimeException                         java.base
+   org.apache.nifi.serialization.json.streaming.ReplayOwningRecordReader -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.ReplayOwningRecordReader -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.ReplayOwningRecordReader -> org.apache.nifi.serialization.MalformedRecordException not found
+   org.apache.nifi.serialization.json.streaming.ReplayOwningRecordReader -> org.apache.nifi.serialization.RecordReader         not found
+   org.apache.nifi.serialization.json.streaming.ReplayOwningRecordReader -> org.apache.nifi.serialization.record.Record        not found
+   org.apache.nifi.serialization.json.streaming.ReplayOwningRecordReader -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.io.ByteArrayInputStream                       java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.AutoCloseable                            java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.Enum                                     java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.Error                                    java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.Exception                                java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.IllegalArgumentException                 java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.Integer                                  java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.Math                                     java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.RuntimeException                         java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.System                                   java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.invoke.CallSite                          java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.invoke.MethodType                        java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.lang.invoke.StringConcatFactory               java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.nio.ByteBuffer                                java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.nio.channels.Channels                         java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.nio.channels.ReadableByteChannel              java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.nio.channels.SeekableByteChannel              java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.nio.file.Files                                java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.nio.file.Path                                 java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.nio.file.StandardOpenOption                   java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.nio.file.attribute.FileAttribute              java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.util.EnumSet                                  java.base
+   org.apache.nifi.serialization.json.streaming.ReplayableInputStream -> java.util.Set                                      java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> java.io.ByteArrayInputStream                       java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> java.lang.Error                                    java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> java.lang.Exception                                java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> java.lang.ReflectiveOperationException             java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> java.lang.RuntimeException                         java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> java.lang.reflect.Field                            java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess -> org.apache.nifi.stream.io.NonCloseableInputStream  not found
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess$InputOperation -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess$InputOperation -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess$InputOperation -> java.lang.FunctionalInterface                      java.base
+   org.apache.nifi.serialization.json.streaming.RewindableInputStreamAccess$InputOperation -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.SchemaApplicationStrategy -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.SchemaApplicationStrategy -> java.lang.Enum                                     java.base
+   org.apache.nifi.serialization.json.streaming.SchemaApplicationStrategy -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.SchemaApplicationStrategy -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.SchemaApplicationStrategy -> org.apache.nifi.components.DescribedValue          not found
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> java.util.function.Supplier                        java.base
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> org.apache.nifi.components.AllowableValue          not found
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> org.apache.nifi.components.PropertyDescriptor      not found
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> org.apache.nifi.components.PropertyDescriptor$Builder not found
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> org.apache.nifi.components.PropertyValue           not found
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> org.apache.nifi.context.PropertyContext            not found
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> org.apache.nifi.controller.ControllerService       not found
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> org.apache.nifi.logging.ComponentLog               not found
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> org.apache.nifi.schema.access.SchemaAccessStrategy not found
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> org.apache.nifi.schema.inference.RecordSourceFactory not found
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> org.apache.nifi.schema.inference.SchemaInferenceEngine not found
+   org.apache.nifi.serialization.json.streaming.SchemaInferenceUtil -> org.apache.nifi.serialization.RecordSchemaCacheService not found
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> java.lang.System                                   java.base
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> java.util.Iterator                                 java.base
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> org.apache.nifi.serialization.SimpleRecordSchema   not found
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> org.apache.nifi.serialization.record.DataType      not found
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> org.apache.nifi.serialization.record.RecordField   not found
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> org.apache.nifi.serialization.record.type.ArrayDataType not found
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> org.apache.nifi.serialization.record.type.ChoiceDataType not found
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> org.apache.nifi.serialization.record.type.MapDataType not found
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot -> org.apache.nifi.serialization.record.type.RecordDataType not found
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot$1 -> java.lang.NoSuchFieldError                         java.base
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot$1 -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.SchemaMutationSnapshot$1 -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.StartingFieldStrategy -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.StartingFieldStrategy -> java.lang.Enum                                     java.base
+   org.apache.nifi.serialization.json.streaming.StartingFieldStrategy -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StartingFieldStrategy -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.StartingFieldStrategy -> org.apache.nifi.components.DescribedValue          not found
+   org.apache.nifi.serialization.json.streaming.StreamingDateTimeTextRecordSetWriter -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingDateTimeTextRecordSetWriter -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingDateTimeTextRecordSetWriter -> java.util.ArrayList                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingDateTimeTextRecordSetWriter -> java.util.Collection                               java.base
+   org.apache.nifi.serialization.json.streaming.StreamingDateTimeTextRecordSetWriter -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingDateTimeTextRecordSetWriter -> java.util.Optional                                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingDateTimeTextRecordSetWriter -> org.apache.nifi.annotation.lifecycle.OnEnabled     not found
+   org.apache.nifi.serialization.json.streaming.StreamingDateTimeTextRecordSetWriter -> org.apache.nifi.components.PropertyDescriptor      not found
+   org.apache.nifi.serialization.json.streaming.StreamingDateTimeTextRecordSetWriter -> org.apache.nifi.components.PropertyValue           not found
+   org.apache.nifi.serialization.json.streaming.StreamingDateTimeTextRecordSetWriter -> org.apache.nifi.controller.ConfigurationContext    not found
+   org.apache.nifi.serialization.json.streaming.StreamingDateTimeTextRecordSetWriter -> org.apache.nifi.serialization.DateTimeUtils        not found
+   org.apache.nifi.serialization.json.streaming.StreamingDateTimeTextRecordSetWriter -> org.apache.nifi.serialization.SchemaRegistryRecordSetWriter not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonParserFactory -> com.fasterxml.jackson.core.JsonFactory             not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonParserFactory -> com.fasterxml.jackson.core.JsonParser              not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonParserFactory -> com.fasterxml.jackson.core.JsonParser$Feature      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonParserFactory -> com.fasterxml.jackson.core.StreamReadConstraints   not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonParserFactory -> com.fasterxml.jackson.core.json.JsonReadFeature    not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonParserFactory -> com.fasterxml.jackson.databind.ObjectMapper        not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonParserFactory -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonParserFactory -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonParserFactory -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonParserFactory -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonParserFactory -> java.util.Objects                                  java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.io.BufferedOutputStream                       java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.io.OutputStream                               java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.lang.Boolean                                  java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.lang.Enum                                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.lang.Integer                                  java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.util.ArrayList                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.util.Collection                               java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> java.util.Optional                                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.commons.compress.compressors.CompressorException not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.commons.compress.compressors.CompressorOutputStream not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.commons.compress.compressors.CompressorStreamFactory not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.NullSuppression                    not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.annotation.documentation.CapabilityDescription not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.annotation.documentation.Tags      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.annotation.lifecycle.OnEnabled     not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.components.AllowableValue          not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.components.DescribedValue          not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.components.PropertyDescriptor      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.components.PropertyDescriptor$Builder not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.components.PropertyValue           not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.components.ValidationContext       not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.components.ValidationResult        not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.components.ValidationResult$Builder not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.controller.ConfigurationContext    not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.expression.ExpressionLanguageScope not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.logging.ComponentLog               not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.migration.PropertyConfiguration    not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.schema.access.SchemaAccessWriter   not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.schema.access.SchemaNotFoundException not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.serialization.DateTimeUtils        not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.serialization.RecordSetWriter      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.serialization.RecordSetWriterFactory not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.apache.nifi.stream.io.GZIPOutputStream         not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.tukaani.xz.FilterOptions                       not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.tukaani.xz.LZMA2Options                        not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.tukaani.xz.XZOutputStream                      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.xerial.snappy.SnappyFramedOutputStream         not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRecordSetWriter -> org.xerial.snappy.SnappyOutputStream               not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> com.fasterxml.jackson.core.JsonLocation            not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> com.fasterxml.jackson.core.JsonParseException      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> com.fasterxml.jackson.core.JsonParser              not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> com.fasterxml.jackson.core.JsonParser$Feature      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> com.fasterxml.jackson.core.JsonStreamContext       not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> com.fasterxml.jackson.core.JsonToken               not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> com.fasterxml.jackson.core.TreeNode                not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> com.fasterxml.jackson.core.io.JsonEOFException     not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> com.fasterxml.jackson.databind.JsonNode            not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> com.fasterxml.jackson.databind.node.ArrayNode      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.io.ByteArrayInputStream                       java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.io.UncheckedIOException                       java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.Boolean                                  java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.Exception                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.Integer                                  java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.Math                                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.Number                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.RuntimeException                         java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.invoke.CallSite                          java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.invoke.LambdaMetafactory                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.invoke.MethodType                        java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.lang.invoke.StringConcatFactory               java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.Arrays                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.Collection                               java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.HashMap                                  java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.Iterator                                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.LinkedHashMap                            java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.Map$Entry                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.Objects                                  java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.Optional                                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.Set                                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.function.BiPredicate                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> java.util.function.Supplier                        java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.logging.ComponentLog               not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.MalformedRecordException not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.RecordReader         not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.SimpleRecordSchema   not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.record.DataType      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.record.MapRecord     not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.record.Record        not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.record.RecordField   not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.record.SerializedForm not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.record.type.ArrayDataType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.record.type.MapDataType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.record.type.RecordDataType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader -> org.apache.nifi.serialization.record.util.DataTypeUtils not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader$1 -> com.fasterxml.jackson.core.JsonToken               not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader$1 -> java.lang.NoSuchFieldError                         java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader$1 -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonRowRecordReader$1 -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> com.fasterxml.jackson.core.JsonLocation            not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> com.fasterxml.jackson.core.JsonParser              not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> com.fasterxml.jackson.core.JsonParser$NumberType   not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> com.fasterxml.jackson.core.JsonToken               not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.AutoCloseable                            java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.Error                                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.Exception                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.IllegalArgumentException                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.Integer                                  java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.RuntimeException                         java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.invoke.CallSite                          java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.invoke.LambdaMetafactory                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.invoke.MethodType                        java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.lang.invoke.StringConcatFactory               java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.util.ArrayList                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.util.Iterator                                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.util.LinkedHashMap                            java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.util.Map$Entry                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.util.Optional                                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.util.Set                                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> java.util.function.BiConsumer                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> org.apache.nifi.schema.inference.RecordSource      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> org.apache.nifi.schema.inference.TimeValueInference not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> org.apache.nifi.serialization.SimpleRecordSchema   not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> org.apache.nifi.serialization.record.DataType      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> org.apache.nifi.serialization.record.RecordField   not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> org.apache.nifi.serialization.record.type.ArrayDataType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> org.apache.nifi.serialization.record.type.ChoiceDataType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> org.apache.nifi.serialization.record.type.MapDataType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference -> org.apache.nifi.serialization.record.type.RecordDataType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$1 -> com.fasterxml.jackson.core.JsonParser              not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$1 -> com.fasterxml.jackson.core.JsonParser$NumberType   not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$1 -> com.fasterxml.jackson.core.JsonToken               not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$1 -> java.lang.NoSuchFieldError                         java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$1 -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$1 -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$InferredJsonSchema -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$InferredJsonSchema -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$InferredJsonSchema -> java.lang.Record                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$InferredJsonSchema -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$InferredJsonSchema -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$InferredJsonSchema -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$InferredJsonSchema -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$InferredJsonSchema -> java.lang.invoke.TypeDescriptor                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$InferredJsonSchema -> java.lang.runtime.ObjectMethods                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$InferredJsonSchema -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$InferredJsonSchema -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$JsonRecordMetadata -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$JsonRecordMetadata -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$JsonRecordMetadata -> java.lang.Record                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$JsonRecordMetadata -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$JsonRecordMetadata -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$JsonRecordMetadata -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$JsonRecordMetadata -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$JsonRecordMetadata -> java.lang.invoke.TypeDescriptor                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$JsonRecordMetadata -> java.lang.runtime.ObjectMethods                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$MetadataCollector -> java.lang.IllegalArgumentException                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$MetadataCollector -> java.lang.IndexOutOfBoundsException                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$MetadataCollector -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$MetadataCollector -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$MetadataCollector -> java.util.AbstractList                             java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$MetadataCollector -> java.util.ArrayList                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$MetadataCollector -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$RecordState -> com.fasterxml.jackson.core.JsonLocation            not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$RecordState -> com.fasterxml.jackson.core.JsonParser              not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonSchemaInference$RecordState -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> com.fasterxml.jackson.core.JsonFactory             not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> com.fasterxml.jackson.core.JsonGenerator           not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> com.fasterxml.jackson.core.JsonGenerator$Feature   not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> com.fasterxml.jackson.core.PrettyPrinter           not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> com.fasterxml.jackson.core.SerializableString      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> com.fasterxml.jackson.core.util.MinimalPrettyPrinter not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> com.fasterxml.jackson.databind.ObjectMapper        not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.io.OutputStream                               java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.CharSequence                             java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.Double                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.Exception                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.Float                                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.Integer                                  java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.Long                                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.invoke.CallSite                          java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.invoke.LambdaMetafactory                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.invoke.MethodType                        java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.lang.invoke.StringConcatFactory               java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.math.BigDecimal                               java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.math.BigInteger                               java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.sql.Date                                      java.sql
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.sql.Time                                      java.sql
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.util.ArrayList                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.util.Collection                               java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.util.Date                                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.util.Iterator                                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.util.Map                                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.util.Map$Entry                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.util.Optional                                 java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.util.Set                                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.util.regex.Matcher                            java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> java.util.regex.Pattern                            java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.NullSuppression                    not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.logging.ComponentLog               not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.schema.access.SchemaAccessWriter   not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.AbstractRecordSetWriter not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.RecordSetWriter      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.WriteResult          not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.DataType      not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.RawRecordWriter not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.Record        not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.RecordField   not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.SerializedForm not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.field.FieldConverter not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.field.FieldConverterRegistry not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.field.StandardFieldConverterRegistry not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.type.ArrayDataType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.type.ChoiceDataType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.type.MapDataType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.type.RecordDataType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult -> org.apache.nifi.serialization.record.util.DataTypeUtils not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$1 -> java.lang.NoSuchFieldError                         java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$1 -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$1 -> org.apache.nifi.serialization.record.RecordFieldType not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$GeneratorTask -> com.fasterxml.jackson.core.JsonGenerator           not found
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$GeneratorTask -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$GeneratorTask -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$SerializedSchemaCompatibility -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$SerializedSchemaCompatibility -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$SerializedSchemaCompatibility -> java.lang.Record                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$SerializedSchemaCompatibility -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$SerializedSchemaCompatibility -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$SerializedSchemaCompatibility -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$SerializedSchemaCompatibility -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$SerializedSchemaCompatibility -> java.lang.invoke.TypeDescriptor                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$SerializedSchemaCompatibility -> java.lang.runtime.ObjectMethods                    java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$SerializedSchemaCompatibility -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.StreamingJsonWriteResult$SerializedSchemaCompatibility -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.TimestampRepresentation -> java.lang.Class                                    java.base
+   org.apache.nifi.serialization.json.streaming.TimestampRepresentation -> java.lang.Enum                                     java.base
+   org.apache.nifi.serialization.json.streaming.TimestampRepresentation -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.TimestampRepresentation -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.TimestampRepresentation -> org.apache.nifi.components.DescribedValue          not found
+   org.apache.nifi.serialization.json.streaming.TokenParserFactory -> com.fasterxml.jackson.core.JsonParser              not found
+   org.apache.nifi.serialization.json.streaming.TokenParserFactory -> java.io.ByteArrayInputStream                       java.base
+   org.apache.nifi.serialization.json.streaming.TokenParserFactory -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.TokenParserFactory -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.TokenParserFactory -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> com.fasterxml.jackson.core.SerializableString      not found
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> com.fasterxml.jackson.core.io.SerializedString     not found
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> java.io.OutputStream                               java.base
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> java.lang.IllegalStateException                    java.base
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> java.lang.System                                   java.base
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> java.nio.ByteBuffer                                java.base
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> java.nio.charset.Charset                           java.base
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> java.nio.charset.StandardCharsets                  java.base
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> java.util.Arrays                                   java.base
+   org.apache.nifi.serialization.json.streaming.Utf8JsonValue -> java.util.Objects                                  java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> java.io.EOFException                               java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> java.io.InputStream                                java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> java.lang.Error                                    java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> java.lang.IllegalArgumentException                 java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> java.lang.Math                                     java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> java.lang.RuntimeException                         java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> java.util.Iterator                                 java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> org.apache.nifi.logging.ComponentLog               not found
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> org.apache.nifi.serialization.MalformedRecordException not found
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> org.apache.nifi.serialization.RecordReader         not found
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> org.apache.nifi.serialization.record.Record        not found
+   org.apache.nifi.serialization.json.streaming.ValidatedInputStreamRecordReader -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> com.fasterxml.jackson.core.JsonParser              not found
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> com.fasterxml.jackson.core.TreeNode                not found
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> java.io.IOException                                java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> java.io.UncheckedIOException                       java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> java.lang.invoke.CallSite                          java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> java.lang.invoke.LambdaMetafactory                 java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> java.lang.invoke.MethodHandle                      java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> java.lang.invoke.MethodHandles                     java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> java.lang.invoke.MethodType                        java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> java.util.function.Supplier                        java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> org.apache.nifi.logging.ComponentLog               not found
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> org.apache.nifi.serialization.MalformedRecordException not found
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> org.apache.nifi.serialization.record.Record        not found
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> org.apache.nifi.serialization.record.RecordSchema  not found
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordFactory -> org.apache.nifi.serialization.record.SerializedForm not found
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordReader -> java.lang.ArithmeticException                      java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordReader -> java.lang.Math                                     java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordReader -> java.lang.Object                                   java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordReader -> java.lang.String                                   java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordReader -> java.lang.Throwable                                java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordReader -> java.util.List                                     java.base
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordReader -> org.apache.nifi.logging.ComponentLog               not found
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordReader -> org.apache.nifi.serialization.MalformedRecordException not found
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordReader -> org.apache.nifi.serialization.RecordReader         not found
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordReader -> org.apache.nifi.serialization.record.Record        not found
+   org.apache.nifi.serialization.json.streaming.ValidatedJsonRecordReader -> org.apache.nifi.serialization.record.RecordSchema  not found

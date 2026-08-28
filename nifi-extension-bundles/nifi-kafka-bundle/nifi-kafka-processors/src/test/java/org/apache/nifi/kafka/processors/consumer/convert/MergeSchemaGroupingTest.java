@@ -34,6 +34,8 @@ import org.apache.nifi.serialization.record.RecordField;
 import org.apache.nifi.serialization.record.RecordFieldType;
 import org.apache.nifi.serialization.record.RecordSchema;
 import org.apache.nifi.serialization.record.RecordSet;
+import org.apache.nifi.serialization.record.SchemaIdentifier;
+import org.apache.nifi.serialization.record.util.DataTypeUtils;
 import org.apache.nifi.util.MockFlowFile;
 import org.apache.nifi.util.MockProcessSession;
 import org.apache.nifi.util.SharedSessionState;
@@ -46,10 +48,12 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MergeSchemaGroupingTest {
@@ -176,6 +180,170 @@ class MergeSchemaGroupingTest {
         assertEquals(List.of("fieldA", "fieldB"), mergedSchema.getFieldNames());
         assertTrue(mergedSchema.getField("fieldA").orElseThrow().isNullable());
         assertTrue(mergedSchema.getField("fieldB").orElseThrow().isNullable());
+    }
+
+    @Test
+    void testAlternatingRepeatedSchemasMatchSequentialMerge() throws Exception {
+        final RecordSchema nestedA = new SimpleRecordSchema(List.of(
+                new RecordField("id", RecordFieldType.INT.getDataType(), Set.of("identifier"), false),
+                new RecordField("onlyA", RecordFieldType.STRING.getDataType(), "a-default", false)));
+        final RecordSchema nestedB = new SimpleRecordSchema(List.of(
+                new RecordField("id", RecordFieldType.LONG.getDataType(), Set.of("externalId"), true),
+                new RecordField("onlyB", RecordFieldType.BOOLEAN.getDataType(), false)));
+        final RecordSchema schemaA = new SimpleRecordSchema(List.of(
+                new RecordField("nested", RecordFieldType.RECORD.getRecordDataType(nestedA), true)));
+        final RecordSchema schemaB = new SimpleRecordSchema(List.of(
+                new RecordField("nested", RecordFieldType.RECORD.getRecordDataType(nestedB), true)));
+        final RecordSchema[] schemas = {schemaA, schemaB, schemaA, schemaB, schemaA};
+
+        RecordSchema expected = null;
+        for (final RecordSchema schema : schemas) {
+            expected = DataTypeUtils.merge(expected, schema);
+        }
+
+        final AtomicReference<RecordSchema> capturedSchema = new AtomicReference<>();
+        final SchemaValidatingRecordWriter validatingWriter = new SchemaValidatingRecordWriter(capturedSchema);
+        final TestRunner runner = TestRunners.newTestRunner(ConsumeKafka.class);
+        runner.addControllerService("alternating-writer", validatingWriter);
+        runner.enableControllerService(validatingWriter);
+        final Processor processor = runner.getProcessor();
+        final MockProcessSession validatingSession = new MockProcessSession(
+                new SharedSessionState(processor, new AtomicLong(0)), processor);
+        final MergeSchemaGrouping validatingGrouping = new MergeSchemaGrouping(
+                validatingWriter, runner.getLogger(), BROKER_URI, true);
+
+        for (int i = 0; i < schemas.length; i++) {
+            final RecordSchema schema = schemas[i];
+            final Record record = new MapRecord(schema, Map.of());
+            final ByteRecord byteRecord = new ByteRecord(TOPIC, 0, i, i, List.of(), null, new byte[0], 0L);
+            validatingGrouping.addRecord(validatingSession, byteRecord, record, schema, Map.of(), Map.of());
+        }
+        validatingGrouping.finishAllGroups(validatingSession);
+
+        assertEquals(expected, capturedSchema.get());
+    }
+
+    @Test
+    void testRepeatedSchemaUsesOriginalSchemaInstance() throws Exception {
+        final AtomicReference<RecordSchema> capturedSchema = new AtomicReference<>();
+        final SchemaValidatingRecordWriter validatingWriter = new SchemaValidatingRecordWriter(capturedSchema);
+        final TestRunner runner = TestRunners.newTestRunner(ConsumeKafka.class);
+        runner.addControllerService("repeated-writer", validatingWriter);
+        runner.enableControllerService(validatingWriter);
+        final Processor processor = runner.getProcessor();
+        final MockProcessSession validatingSession = new MockProcessSession(
+                new SharedSessionState(processor, new AtomicLong(0)), processor);
+        final MergeSchemaGrouping validatingGrouping = new MergeSchemaGrouping(
+                validatingWriter, runner.getLogger(), BROKER_URI, true);
+
+        for (int i = 0; i < 100; i++) {
+            final ByteRecord byteRecord = new ByteRecord(TOPIC, 0, i, i, List.of(), null, new byte[0], 0L);
+            validatingGrouping.addRecord(validatingSession, byteRecord, RECORD_A, SCHEMA_A, Map.of(), Map.of());
+        }
+        validatingGrouping.finishAllGroups(validatingSession);
+
+        assertSame(SCHEMA_A, capturedSchema.get());
+    }
+
+    @Test
+    void testStructurallyEqualSchemaInstancesPreserveSequentialMergeMetadata() throws Exception {
+        final SimpleRecordSchema firstSchema = new SimpleRecordSchema(List.of(
+                new RecordField("value", RecordFieldType.STRING.getDataType())));
+        firstSchema.setSchemaName("First");
+        firstSchema.setSchemaNamespace("example.first");
+        final SimpleRecordSchema secondSchema = new SimpleRecordSchema(List.of(
+                new RecordField("value", RecordFieldType.STRING.getDataType())));
+        secondSchema.setSchemaName("Second");
+        secondSchema.setSchemaNamespace("example.second");
+        final RecordSchema expected = DataTypeUtils.merge(DataTypeUtils.merge(null, firstSchema), secondSchema);
+
+        final AtomicReference<RecordSchema> capturedSchema = new AtomicReference<>();
+        final SchemaValidatingRecordWriter validatingWriter = new SchemaValidatingRecordWriter(capturedSchema);
+        final TestRunner runner = TestRunners.newTestRunner(ConsumeKafka.class);
+        runner.addControllerService("metadata-writer", validatingWriter);
+        runner.enableControllerService(validatingWriter);
+        final Processor processor = runner.getProcessor();
+        final MockProcessSession validatingSession = new MockProcessSession(
+                new SharedSessionState(processor, new AtomicLong(0)), processor);
+        final MergeSchemaGrouping validatingGrouping = new MergeSchemaGrouping(
+                validatingWriter, runner.getLogger(), BROKER_URI, true);
+
+        validatingGrouping.addRecord(validatingSession, byteRecord(0), new MapRecord(firstSchema, Map.of()), firstSchema, Map.of(), Map.of());
+        validatingGrouping.addRecord(validatingSession, byteRecord(1), new MapRecord(secondSchema, Map.of()), secondSchema, Map.of(), Map.of());
+        validatingGrouping.finishAllGroups(validatingSession);
+
+        assertEquals(expected.getIdentifier(), capturedSchema.get().getIdentifier());
+    }
+
+    @Test
+    void testNamedRecursiveSchemasWithDifferentFieldsAreMerged() throws Exception {
+        final SimpleRecordSchema recursiveA = recursiveSchema("fieldA");
+        final SimpleRecordSchema recursiveB = recursiveSchema("fieldB");
+        assertEquals(recursiveA, recursiveB);
+
+        final AtomicReference<RecordSchema> capturedSchema = new AtomicReference<>();
+        final SchemaValidatingRecordWriter validatingWriter = new SchemaValidatingRecordWriter(capturedSchema);
+        final TestRunner runner = TestRunners.newTestRunner(ConsumeKafka.class);
+        runner.addControllerService("recursive-writer", validatingWriter);
+        runner.enableControllerService(validatingWriter);
+        final Processor processor = runner.getProcessor();
+        final MockProcessSession validatingSession = new MockProcessSession(
+                new SharedSessionState(processor, new AtomicLong(0)), processor);
+        final MergeSchemaGrouping validatingGrouping = new MergeSchemaGrouping(
+                validatingWriter, runner.getLogger(), BROKER_URI, true);
+
+        validatingGrouping.addRecord(validatingSession, byteRecord(0), new MapRecord(recursiveA, Map.of()), recursiveA, Map.of(), Map.of());
+        validatingGrouping.addRecord(validatingSession, byteRecord(1), new MapRecord(recursiveB, Map.of()), recursiveB, Map.of(), Map.of());
+        validatingGrouping.finishAllGroups(validatingSession);
+
+        assertTrue(capturedSchema.get().getField("fieldA").isPresent());
+        assertTrue(capturedSchema.get().getField("fieldB").isPresent());
+    }
+
+    @Test
+    void testHighCardinalitySchemasMatchSequentialMerge() throws Exception {
+        final AtomicReference<RecordSchema> capturedSchema = new AtomicReference<>();
+        final SchemaValidatingRecordWriter validatingWriter = new SchemaValidatingRecordWriter(capturedSchema);
+        final TestRunner runner = TestRunners.newTestRunner(ConsumeKafka.class);
+        runner.addControllerService("high-cardinality-writer", validatingWriter);
+        runner.enableControllerService(validatingWriter);
+        final Processor processor = runner.getProcessor();
+        final MockProcessSession validatingSession = new MockProcessSession(
+                new SharedSessionState(processor, new AtomicLong(0)), processor);
+        final MergeSchemaGrouping validatingGrouping = new MergeSchemaGrouping(
+                validatingWriter, runner.getLogger(), BROKER_URI, true);
+
+        RecordSchema expected = null;
+        RecordSchema firstSchema = null;
+        for (int i = 0; i < 70; i++) {
+            final RecordSchema schema = new SimpleRecordSchema(List.of(
+                    new RecordField("field" + i, RecordFieldType.INT.getDataType(), false)));
+            if (firstSchema == null) {
+                firstSchema = schema;
+            }
+            expected = DataTypeUtils.merge(expected, schema);
+            final ByteRecord byteRecord = new ByteRecord(TOPIC, 0, i, i, List.of(), null, new byte[0], 0L);
+            validatingGrouping.addRecord(validatingSession, byteRecord, new MapRecord(schema, Map.of()), schema, Map.of(), Map.of());
+        }
+        expected = DataTypeUtils.merge(expected, firstSchema);
+        validatingGrouping.addRecord(validatingSession, byteRecord(70), new MapRecord(firstSchema, Map.of()), firstSchema, Map.of(), Map.of());
+        validatingGrouping.finishAllGroups(validatingSession);
+
+        assertEquals(expected, capturedSchema.get());
+    }
+
+    private static SimpleRecordSchema recursiveSchema(final String uniqueField) {
+        final SimpleRecordSchema schema = new SimpleRecordSchema(SchemaIdentifier.EMPTY);
+        schema.setSchemaName("Node");
+        schema.setSchemaNamespace("example");
+        schema.setFields(List.of(
+                new RecordField(uniqueField, RecordFieldType.STRING.getDataType(), true),
+                new RecordField("child", RecordFieldType.RECORD.getRecordDataType(schema), true)));
+        return schema;
+    }
+
+    private static ByteRecord byteRecord(final long offset) {
+        return new ByteRecord(TOPIC, 0, offset, offset, List.of(), null, new byte[0], 0L);
     }
 
     private static final class PassThroughSchemaRecordWriter extends AbstractControllerService implements RecordSetWriterFactory {

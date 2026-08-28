@@ -43,5 +43,12 @@ public interface RecordGroupingStrategy {
             Map<String, String> attributes,
             Map<String, String> groupingAttributes) throws IOException, SchemaNotFoundException;
 
+    default boolean isRecordRetentionRequired() {
+        return false;
+    }
+
     void finishAllGroups(ProcessSession session);
+
+    default void abortAllGroups() {
+    }
 }

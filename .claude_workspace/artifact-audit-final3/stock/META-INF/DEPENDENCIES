@@ -1,0 +1,53 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+nifi-streaming-json-record-services-stock-nar
+
+
+From: 'an unknown organization'
+
+  - XZ for Java (https://tukaani.org/xz/java.html) org.tukaani:xz:jar:1.12
+    License: 0BSD 
+
+
+From: 'Apache NiFi Project' (https://nifi.apache.org/)
+
+  - nifi-avro-record-utils (https://nifi.apache.org/nifi-bom/nifi-extension-bom/nifi-extension-bundles/nifi-extension-utils/nifi-record-utils/nifi-avro-record-utils) org.apache.nifi:nifi-avro-record-utils:jar:2.10.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - nifi-schema-inference-utils (https://nifi.apache.org/nifi-bom/nifi-extension-bom/nifi-extension-bundles/nifi-extension-utils/nifi-record-utils/nifi-schema-inference-utils) org.apache.nifi:nifi-schema-inference-utils:jar:2.10.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - nifi-standard-record-utils (https://nifi.apache.org/nifi-bom/nifi-extension-bom/nifi-extension-bundles/nifi-extension-utils/nifi-record-utils/nifi-standard-record-utils) org.apache.nifi:nifi-standard-record-utils:jar:2.10.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - nifi-standard-shared-nar (https://nifi.apache.org/nifi-bom/nifi-extension-bom/nifi-extension-bundles/nifi-standard-services-api-bom/nifi-standard-shared-bom/nifi-standard-shared-nar) org.apache.nifi:nifi-standard-shared-nar:nar:2.10.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+
+From: 'The Apache Software Foundation' (https://www.apache.org/)
+
+  - Apache Avro (https://avro.apache.org) org.apache.avro:avro:bundle:1.12.1
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Apache Commons CSV (https://commons.apache.org/proper/commons-csv/) org.apache.commons:commons-csv:jar:1.14.1
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - nifi-streaming-json-record-services-core (https://nifi.apache.org/nifi-streaming-json-record-services-core/) org.apache.nifi:nifi-streaming-json-record-services-core:jar:2.12.0-SNAPSHOT
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - nifi-streaming-json-record-services-stock (https://nifi.apache.org/nifi-streaming-json-record-services-stock/) org.apache.nifi:nifi-streaming-json-record-services-stock:jar:2.12.0-SNAPSHOT
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'xerial.org' (https://github.com/xerial/snappy-java)
+
+  - snappy-java (https://github.com/xerial/snappy-java) org.xerial.snappy:snappy-java:bundle:1.1.10.8
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+
+
+
+

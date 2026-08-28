@@ -37,13 +37,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Continue with Merged Schema strategy: groups by topic, partition, and grouping attributes,
  * merging per-record write schemas and writing once per group.
  */
 public class MergeSchemaGrouping implements RecordGroupingStrategy {
+    private static final int MAX_TRACKED_WRITE_SCHEMAS = 64;
 
     private final RecordSetWriterFactory writerFactory;
     private final ComponentLog logger;
@@ -71,8 +71,18 @@ public class MergeSchemaGrouping implements RecordGroupingStrategy {
             final Map<String, String> attributes,
             final Map<String, String> groupingAttributes) {
         final MergeGroupKey key = new MergeGroupKey(groupingAttributes, consumerRecord.getTopic(), consumerRecord.getPartition());
-        final MergeGroup group = mergeGroups.computeIfAbsent(key, ignored -> new MergeGroup(attributes));
+        MergeGroup existingGroup = mergeGroups.get(key);
+        if (existingGroup == null) {
+            existingGroup = new MergeGroup(attributes);
+            mergeGroups.put(key, existingGroup);
+        }
+        final MergeGroup group = existingGroup;
         group.add(recordToWrite, writeSchema, consumerRecord);
+    }
+
+    @Override
+    public boolean isRecordRetentionRequired() {
+        return true;
     }
 
     @Override
@@ -91,7 +101,6 @@ public class MergeSchemaGrouping implements RecordGroupingStrategy {
             }
 
             final Map<String, String> flowFileAttributes = new HashMap<>();
-            final AtomicInteger recordCount = new AtomicInteger();
             flowFile = session.write(flowFile, out -> {
                 try (final RecordSetWriter writer = writerFactory.createWriter(logger, schemaToWrite, out, group.attributes)) {
                     writer.beginRecordSet();
@@ -99,7 +108,7 @@ public class MergeSchemaGrouping implements RecordGroupingStrategy {
                         writer.write(record);
                     }
                     final WriteResult writeResult = writer.finishRecordSet();
-                    recordCount.set(writeResult.getRecordCount());
+                    group.recordCount = writeResult.getRecordCount();
 
                     flowFileAttributes.putAll(writeResult.getAttributes());
                     flowFileAttributes.put(CoreAttributes.MIME_TYPE.key(), writer.getMimeType());
@@ -108,8 +117,8 @@ public class MergeSchemaGrouping implements RecordGroupingStrategy {
                 }
             });
 
-            flowFileAttributes.put("record.count", String.valueOf(recordCount.get()));
-            flowFileAttributes.put(KafkaFlowFileAttribute.KAFKA_COUNT, String.valueOf(recordCount.get()));
+            flowFileAttributes.put("record.count", String.valueOf(group.recordCount));
+            flowFileAttributes.put(KafkaFlowFileAttribute.KAFKA_COUNT, String.valueOf(group.recordCount));
 
             flowFileAttributes.put(KafkaFlowFileAttribute.KAFKA_TOPIC, key.topic());
             flowFileAttributes.put(KafkaFlowFileAttribute.KAFKA_PARTITION, String.valueOf(key.partition()));
@@ -122,9 +131,14 @@ public class MergeSchemaGrouping implements RecordGroupingStrategy {
             flowFile = session.putAllAttributes(flowFile, flowFileAttributes);
 
             session.getProvenanceReporter().receive(flowFile, brokerUri + "/" + key.topic());
-            session.adjustCounter("Records Received from " + key.topic(), recordCount.get(), false);
+            session.adjustCounter("Records Received from " + key.topic(), group.recordCount, false);
             session.transfer(flowFile, ConsumeKafka.SUCCESS);
         }
+        mergeGroups.clear();
+    }
+
+    @Override
+    public void abortAllGroups() {
         mergeGroups.clear();
     }
 
@@ -135,9 +149,13 @@ public class MergeSchemaGrouping implements RecordGroupingStrategy {
         final Map<String, String> attributes;
         final List<Record> records = new ArrayList<>();
         RecordSchema mergedWriteSchema;
+        RecordSchema firstWriteSchema;
+        List<RecordSchema> additionalWriteSchemas;
+        boolean trackDistinctWriteSchemas = true;
         long maxOffset = Long.MIN_VALUE;
         long minOffset = Long.MAX_VALUE;
         long minTimestamp = Long.MAX_VALUE;
+        int recordCount;
 
         MergeGroup(final Map<String, String> attributes) {
             this.attributes = attributes;
@@ -145,10 +163,52 @@ public class MergeSchemaGrouping implements RecordGroupingStrategy {
 
         void add(final Record recordToWrite, final RecordSchema writeSchema, final ByteRecord consumerRecord) {
             records.add(recordToWrite);
-            mergedWriteSchema = DataTypeUtils.merge(mergedWriteSchema, writeSchema);
+            if (records.size() == 1) {
+                firstWriteSchema = writeSchema;
+                mergedWriteSchema = writeSchema;
+            } else if (firstWriteSchema != writeSchema) {
+                if (sameSchema(firstWriteSchema, writeSchema)) {
+                    if (mergedWriteSchema == firstWriteSchema) {
+                        mergedWriteSchema = DataTypeUtils.merge(mergedWriteSchema, writeSchema);
+                    }
+                } else {
+                    mergeDistinctSchema(writeSchema);
+                }
+            }
             maxOffset = Math.max(maxOffset, consumerRecord.getOffset());
             minOffset = Math.min(minOffset, consumerRecord.getOffset());
             minTimestamp = Math.min(minTimestamp, consumerRecord.getTimestamp());
+        }
+
+        private void mergeDistinctSchema(final RecordSchema writeSchema) {
+            if (!trackDistinctWriteSchemas) {
+                mergedWriteSchema = DataTypeUtils.merge(mergedWriteSchema, writeSchema);
+            } else {
+                if (additionalWriteSchemas == null) {
+                    additionalWriteSchemas = new ArrayList<>();
+                }
+                if (!alreadyMerged(writeSchema)) {
+                    additionalWriteSchemas.add(writeSchema);
+                    mergedWriteSchema = DataTypeUtils.merge(mergedWriteSchema, writeSchema);
+                    if (additionalWriteSchemas.size() == MAX_TRACKED_WRITE_SCHEMAS - 1) {
+                        additionalWriteSchemas = null;
+                        trackDistinctWriteSchemas = false;
+                    }
+                }
+            }
+        }
+
+        private static boolean sameSchema(final RecordSchema first, final RecordSchema second) {
+            return first == second || (!first.isRecursive() && !second.isRecursive() && first.equals(second));
+        }
+
+        private boolean alreadyMerged(final RecordSchema writeSchema) {
+            for (final RecordSchema mergedSchema : additionalWriteSchemas) {
+                if (sameSchema(mergedSchema, writeSchema)) {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

@@ -37,4 +37,13 @@
         <module>nifi-stateless-system-test-suite</module>
     </modules>
 
+    <profiles>
+        <profile>
+            <id>benchmarks</id>
+            <modules>
+                <module>nifi-record-serialization-benchmarks</module>
+            </modules>
+        </profile>
+    </profiles>
+
 </project>
